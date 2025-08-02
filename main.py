@@ -1,5 +1,7 @@
 from stats import get_word_count
 from stats import get_char
+import sys
+print(sys.argv)
 def get_book_text(book):
     with open(book) as f:
         file_contents = f.read()
@@ -8,7 +10,7 @@ def get_book_text(book):
     
 
 def main():
-    book = "books/frankenstein.txt"
+    book = ""
     words = get_book_text(book)
     counted_words = get_word_count(words)
     letters = get_char(words)
